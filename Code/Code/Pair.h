@@ -80,7 +80,7 @@ ostream& operator <<(ostream& stream, Pair& pair)
 
 ofstream& operator<<(ofstream& stream, Pair& pair)
 {
-	stream << pair.First << "\n" << pair.Second << "\n";
+	stream << pair.First << endl << pair.Second << endl;
 	return stream;
 }
 
