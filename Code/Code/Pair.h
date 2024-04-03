@@ -49,8 +49,6 @@ public:
 		return *this;
 	}
 
-	bool operator==(Pair& anotherPair) { return First == anotherPair.First && Second == anotherPair.Second; }
-
 	bool operator>=(Pair& anotherPair)
 	{
 		return First + Second >= anotherPair.First + anotherPair.Second;
@@ -73,7 +71,7 @@ istream& operator>>(istream& stream, Pair& pair)
 	return stream;
 }
 
-ostream& operator <<(ostream& stream, Pair& pair)
+ostream& operator<<(ostream& stream, Pair& pair)
 {
 	return { stream << pair.First << ":" << pair.Second };
 }
