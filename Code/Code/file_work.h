@@ -4,9 +4,9 @@
 
 void WriteAFile(int Lenght) 
 {
-	ofstream F1("F1.txt");
+	fstream F1("F1.txt", ios::out | ios::trunc); //ofstream
 
-	if (!F1.is_open())
+	if (!F1)
 	{
 		cout << "Не удалось открыть файл" << endl;
 		return;
@@ -25,9 +25,9 @@ void WriteAFile(int Lenght)
 
 void PrintAFile() 
 {
-	ifstream F1("F1.txt");
+	fstream F1("F1.txt", ios::in); //ifstream
 
-	if (!F1.is_open())
+	if (!F1)
 	{
 		cout << "Не удалось открыть файл" << endl;
 		return;
@@ -41,8 +41,15 @@ void PrintAFile()
 
 void RemoveAllLesserPair(Pair& comparePair) 
 {
-	ifstream F1("F1.txt");
-	ofstream Temp("temp.txt");
+	fstream F1("F1.txt", ios::in); //ifstream
+
+	if (!F1)
+	{
+		cout << "Не удалось открыть файл" << endl;
+		return;
+	}
+
+	fstream Temp("temp.txt", ios::out | ios::trunc); //ofstream
 
 	Pair buffer;
 
@@ -61,8 +68,15 @@ void RemoveAllLesserPair(Pair& comparePair)
 
 void AddLToPairs(double L)
 {
-	ifstream F1("F1.txt");
-	ofstream Temp("temp.txt");
+	fstream F1("F1.txt", ios::in); //ifstream
+
+	if (!F1)
+	{
+		cout << "Не удалось открыть файл" << endl;
+		return;
+	}
+
+	fstream Temp("temp.txt", ios::out | ios::trunc); //ofstream
 
 	Pair buffer;
 
@@ -88,8 +102,15 @@ void AddKMorePairs(int position, int K)
 		return;
 	}
 
-	ifstream F1("F1.txt");
-	ofstream Temp("temp.txt");
+	fstream F1("F1.txt", ios::in); //ifstream
+
+	if (!F1)
+	{
+		cout << "Не удалось открыть файл" << endl;
+		return;
+	}
+
+	fstream Temp("temp.txt", ios::out | ios::trunc); //ofstream
 
 	Pair buffer;
 

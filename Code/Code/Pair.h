@@ -58,9 +58,9 @@ public:
 
 	friend ostream& operator << (ostream& stream, Pair& pair);
 
-	friend ofstream& operator<< (ofstream& stream, Pair& pair);
+	friend fstream& operator<< (fstream& stream, Pair& pair);
 
-	friend ifstream& operator>>(ifstream& stream, Pair& pair);
+	friend fstream& operator>>(fstream& stream, Pair& pair);
 };
 
 istream& operator>>(istream& stream, Pair& pair)
@@ -76,13 +76,13 @@ ostream& operator<<(ostream& stream, Pair& pair)
 	return { stream << pair.First << ":" << pair.Second };
 }
 
-ofstream& operator<<(ofstream& stream, Pair& pair)
+fstream& operator<<(fstream& stream, Pair& pair)
 {
 	stream << pair.First << endl << pair.Second << endl;
 	return stream;
 }
 
-ifstream& operator>>(ifstream& stream, Pair& pair) 
+fstream& operator>>(fstream& stream, Pair& pair) 
 {
 	stream >> pair.First;
 	stream >> pair.Second;
