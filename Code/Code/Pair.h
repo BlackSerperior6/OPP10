@@ -54,11 +54,11 @@ public:
 		return First + Second >= anotherPair.First + anotherPair.Second;
 	}
 
-	friend istream& operator >> (istream& stream, Pair& pair);
+	friend istream& operator>>(istream& stream, Pair& pair);
 
-	friend ostream& operator << (ostream& stream, Pair& pair);
+	friend ostream& operator<<(ostream& stream, Pair& pair);
 
-	friend fstream& operator<< (fstream& stream, Pair& pair);
+	friend fstream& operator<<(fstream& stream, Pair& pair);
 
 	friend fstream& operator>>(fstream& stream, Pair& pair);
 };
